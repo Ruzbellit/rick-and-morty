@@ -4,7 +4,7 @@
     <div class="barra-buscador">
         <div class="buscador" [ngClass]="{'buscador-open': nombreBusqueda}">
             <input type="text" placeholder="Search" (keydown.enter)="buscar()" [(ngModel)]="nombreBusqueda">
-            <div class="boton">
+            <div class="boton" (click)="buscar()">
                 <i class="fa fa-search"></i>
             </div>
         </div>

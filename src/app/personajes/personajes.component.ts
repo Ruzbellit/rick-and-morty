@@ -71,6 +71,7 @@ export class PersonajesComponent implements OnInit{
   clear() {
     this.nombreBusqueda = "";
     this.generoSeleccionado = "";
+    this.getPersonajes();
   }
 
 }
