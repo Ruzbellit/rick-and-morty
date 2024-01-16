@@ -1,4 +1,68 @@
 /* PersonajesComponent's private CSS styles */
+.buscador {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+
+input {
+    outline: none;
+    box-sizing: border-box;
+    height: 60px;
+    width: 0;
+    padding: 0 20px;
+    color: black;
+    border-radius: 50px;
+    font-size: 20px;
+    border: 1px solid rgb(22, 172, 192);
+    transition: all .7s ease;
+}
+
+/* delay transition to 5s on input when hovering out */
+
+
+
+::placeholder {
+    color: #2c2c2c;
+}
+
+.boton {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80px;
+    height: 80px;
+    background: rgb(22, 172, 192);
+    line-height: 80px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: 5s;
+}
+
+.boton i {
+    font-size: 25px;
+    color: white;
+    line-height: 80px;
+    transition: all .7s ease;
+}
+
+.buscador:hover input {
+    width: 350px;
+}
+
+.buscador:hover i {
+    transform: rotate(-360deg);
+}
+
+.boton:hover {
+    background: #cc0000
+}
+
+
+
 .personajes {
   width: 100%;
   list-style-type: none;
@@ -7,7 +71,7 @@
   flex-direction: row;
   justify-content: center;
   align-content: flex-start;
-
+  padding-top: 30px;
 }
 
 a {
@@ -57,19 +121,7 @@ a {
   background-color: #BBD8DC;
   color: white;
 }
-.personajes .badge {
-  display:inline-block;
-  font-size: small;
-  color: white;
-  padding: 0.8em 0.7em 0 0.7em;
-  background-color:#405061;
-  line-height: 1em;
-  position: relative;
-  left: -1px;
-  top: -4px;
-  height: 1.8em;
-  margin-right: .8em;
-  border-radius: 4px 0 0 4px;
-}
+
+
 
 
