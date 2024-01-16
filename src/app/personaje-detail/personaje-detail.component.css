@@ -1,0 +1,6 @@
+.contentDetails img {
+    width: 220px;
+    height: 280px;
+    border-radius: 30px;
+    border: 1px solid #000;
+}

@@ -1,0 +1,11 @@
+<div class="personajes">
+
+    <div class="card" *ngFor="let personaje of personajes">
+        <a routerLink="/detail/{{personaje.id}}">
+            <li>
+                <p>{{personaje.name}}</p> <img src={{personaje.image}}>
+            </li>
+        </a>
+    </div>
+
+</div>

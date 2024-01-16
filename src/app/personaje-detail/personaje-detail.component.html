@@ -1,0 +1,52 @@
+<div class = "contentDetails" *ngIf="personaje">
+
+    <h2>{{personaje.name | uppercase}} Details</h2>
+
+    <img src={{personaje.image}}>
+
+    <div>
+        <span>id: </span>{{personaje.id}}
+    </div>
+
+    <div>
+        <span>name: </span>{{personaje.name}}
+    </div>
+
+    <div>
+        <span>status: </span>{{personaje.status}}
+    </div>
+
+    <div>
+        <span>species: </span>{{personaje.species}}
+    </div>
+
+    <div>
+        <span>gender: </span>{{personaje.gender}}
+    </div>
+
+    <div>
+        <span>origin : </span>{{personaje.origin }}
+    </div>
+
+    <div>
+        <span>location: </span>{{personaje.location}}
+    </div>
+    <div>
+        <span>image: </span>{{personaje.image}}
+    </div>
+
+    <div>
+        <span>episode: </span>{{personaje.episode}}
+    </div>
+
+    <div>
+        <span>url : </span>{{personaje.url }}
+    </div>
+
+    <div>
+        <span>created: </span>{{personaje.created}}
+    </div>
+
+</div>
+
+<button (click)="goBack()">go back</button>
