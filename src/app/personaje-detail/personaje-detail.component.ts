@@ -31,7 +31,6 @@ export class PersonajeDetailComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id');
       this.personajeService.getPersonaje(+id!)
       .subscribe(personaje => this.personaje = personaje!);
-    
   }
 
   goBack(): void {

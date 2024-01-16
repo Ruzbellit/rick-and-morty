@@ -11,5 +11,14 @@ export interface Personaje {
     episode: Array<string>;
     url: string;
     created: string;
+}
 
-  }
+export interface PersonajeResponse {
+  info: {
+    count: number;
+    pages: number;
+    next:string;
+    prev: string;
+  },
+  results: Personaje[];
+}

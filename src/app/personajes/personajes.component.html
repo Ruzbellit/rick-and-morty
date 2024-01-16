@@ -1,11 +1,23 @@
-<div class="personajes">
+<section infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollUpDistance]="2" [infiniteScrollThrottle]="50"
+    (scrolled)="onScroll()">
 
-    <div class="card" *ngFor="let personaje of personajes">
-        <a routerLink="/detail/{{personaje.id}}">
-            <li>
-                <p>{{personaje.name}}</p> <img src={{personaje.image}}>
-            </li>
-        </a>
+    <div class="buscador">
+        <input type="text" placeholder="Buscar" />
+        <div> 
+            <i class="fa fa-search"></i>
+        </div>
     </div>
 
-</div>
+    <div class="personajes">
+
+        <div class="card" *ngFor="let personaje of personajes">
+            <a routerLink="/detail/{{personaje.id}}">
+                <li>
+                    <p>{{personaje.name}}</p> <img src={{personaje.image}}>
+                </li>
+            </a>
+        </div>
+
+    </div>
+
+</section>

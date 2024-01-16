@@ -1,15 +1,16 @@
 import { Injectable } from '@angular/core';
-import { Personaje } from './personaje';
+import { Personaje, PersonajeResponse } from './personaje';
 import { Observable, of, map } from 'rxjs';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class PersonajeService {
 
   private baseURL = "https://rickandmortyapi.com/api";
-  private personajesUrl = 'api/personajes';  // URL to web api
+  private siguienteUrl: string = "";
 
   constructor(
     private http: HttpClient,
@@ -20,18 +21,30 @@ export class PersonajeService {
     const url = this.baseURL + '/character';
 
     // refactor the following line so it gets the property response before returning
-    return this.http.get(url).pipe(
-      map( (response: any )=> {
-        return response.results;
+    return this.http.get<PersonajeResponse>(url).pipe(
+      map( response => {
+        this.siguienteUrl = response.info.next;
+        return response.results
       })
-    );
-  
+    )
   }
 
   getPersonaje(id: number): Observable<Personaje | undefined> {
-    // return of(PERSONAJES.find(personaje => personaje.id === id));
     const url = `${this.baseURL}/character/${id}`;
     return this.http.get<Personaje>(url);
+  }
+
+  getSiguientePagina(): Observable<Personaje[]> {
+    if (!this.siguienteUrl) {
+      return of([]);
+    } else {
+      return this.http.get<PersonajeResponse>(this.siguienteUrl).pipe(
+        map((response) => {
+          this.siguienteUrl = response.info.next;
+          return response.results;
+        })
+      )
+    }
   }
  
 
