@@ -4,3 +4,66 @@
     border-radius: 30px;
     border: 1px solid #000;
 }
+
+.title-details {
+    font-size: 30px;
+    color: rgb(253, 253, 253);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.contentDetails {
+    display: flex;
+    justify-content: center;
+
+}
+
+.contentDetails .card { 
+    position:center;
+    margin: 25px;
+    border-radius: 8px;
+    box-shadow: 8 2px 2px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.bold {
+    font-weight: bold;
+    font-size: 19px;
+    text-align: end;
+
+}
+
+.detail {
+    font-family:cursive;
+    font-size: 17px;
+    text-align:left;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.episode {
+    height: 50px;
+    width: 100px;
+    overflow:hidden;
+    display: flex;
+}
+
+.btn-back {
+    width: 90px;
+    height: 30px;
+    border: solid 2px rgb(78, 201, 115);
+    background-color: #272727;
+    text-align: center;
+    margin: 20px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: bold;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 17px;
+}
+
+.btn-back:hover {
+    background: rgb(70, 70, 70);
+     color: rgb(255, 255, 255);}

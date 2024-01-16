@@ -1,52 +1,56 @@
 <div class = "contentDetails" *ngIf="personaje">
 
-    <h2>{{personaje.name | uppercase}} Details</h2>
+    
+    
+<div class="card">
+
+    <h2 class="title-details">Details <br> {{personaje.name | uppercase}} </h2>
 
     <img src={{personaje.image}}>
 
-    <div>
-        <span>id: </span>{{personaje.id}}
+    <div class="detail">
+        <span class="bold">id: </span>{{personaje.id}}
     </div>
 
-    <div>
-        <span>name: </span>{{personaje.name}}
+    <div class="detail">
+        <span class="bold">name: </span>{{personaje.name}}
     </div>
 
-    <div>
-        <span>status: </span>{{personaje.status}}
+    <div class="detail">
+        <span class="bold">status: </span>{{personaje.status}}
     </div>
 
-    <div>
-        <span>species: </span>{{personaje.species}}
+    <div class="detail">
+        <span class="bold">species: </span>{{personaje.species}}
     </div>
 
-    <div>
-        <span>gender: </span>{{personaje.gender}}
+    <div class="detail">
+        <span class="bold">gender: </span>{{personaje.gender}}
     </div>
 
-    <div>
-        <span>origin : </span>{{personaje.origin }}
+    <div class="detail">
+        <span class="bold">origin : </span>{{personaje.origin }}
     </div>
 
-    <div>
-        <span>location: </span>{{personaje.location}}
+    <div class="detail">
+        <span class="bold">location: </span>{{personaje.location}}
     </div>
-    <div>
-        <span>image: </span>{{personaje.image}}
-    </div>
-
-    <div>
-        <span>episode: </span>{{personaje.episode}}
+    <div class="detail">
+        <span class="bold">image: </span>{{personaje.image}}
     </div>
 
-    <div>
-        <span>url : </span>{{personaje.url }}
+    <div class="detail">
+        <span class="bold">episode: </span> <span class="episode" > {{personaje.episode}}</span>
     </div>
 
-    <div>
-        <span>created: </span>{{personaje.created}}
+    <div class="detail">
+        <span class="bold">url : </span>{{personaje.url }}
     </div>
 
+    <div class="detail">
+        <span class="bold">created: </span>{{personaje.created}}
+    </div>
+
+    <button class="btn-back" (click)="goBack()">Back</button>
 </div>
-
-<button (click)="goBack()">go back</button>
+</div>

@@ -2,19 +2,29 @@
     (scrolled)="onScroll()">
 
     <div class="buscador">
-  <input type="text" placeholder="Search" (keydown.enter)="buscar()" [(ngModel)]="nombreBusqueda">
-        <div class = "boton"> 
+        <input type="text" placeholder="Search" (keydown.enter)="buscar()" [(ngModel)]="nombreBusqueda">
+        <div class="boton">
             <i class="fa fa-search"></i>
         </div>
     </div>
 
-    <div>
-        <button class="btn-female" (click)="filtrarPorGenero('female')">
+
+    <div class="btns-genero">
+        <p>Filtrar por genero</p>
+
+        <button class="btn female" (click)="filtrarPorGenero('female')">
             Female
         </button>
-        <button class="btn-male">
+        <button class="btn male" (click)="filtrarPorGenero('male')">
             Male
         </button>
+        <button class="btn genderless" (click)="filtrarPorGenero('genderless')">
+            Genderless
+        </button>
+        <button class="btn unknown" (click)="filtrarPorGenero('unknown')">
+            Unknown
+        </button>
+
     </div>
 
     <div class="personajes">

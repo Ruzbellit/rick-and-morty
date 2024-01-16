@@ -2,7 +2,7 @@
 .buscador {
     position: absolute;
     left: 50%;
-    top: 25%;
+    top: 280px;
     transform: translate(-50%, -50%);
     padding: 10px;
 }
@@ -58,9 +58,42 @@ input {
 }
 
 .boton:hover {
-    background: #cc0000
+    background: #4cc566;
+    transition: all .7s ease;
 }
 
+.btn-genero {
+    display: flex;
+    width: 100%;
+    
+} 
+
+.btns-genero p {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 50px;
+    color:rgb(121, 224, 126)
+} 
+
+.btn {
+    width: 110px;
+    height: 30px;
+    border: solid 2px rgb(0, 107, 89);
+    background-color: #272727;
+    text-align: center;
+    margin: 5px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: bold;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+
+
+.btn:hover {
+    background: rgb(70, 70, 70);
+     color:rgb(255, 255, 255);}
 
 
 .personajes {
@@ -71,7 +104,7 @@ input {
   flex-direction: row;
   justify-content: center;
   align-content: flex-start;
-  padding-top: 30px;
+  padding-top: 5px;
 }
 
 a {
