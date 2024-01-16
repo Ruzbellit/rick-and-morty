@@ -79,11 +79,11 @@ input {
     
 }
 
+.barra-buscador {
+    min-height: 40px;
+}
+
 @media screen and (max-width: 700px) {
-    .barra-buscador {
-        min-height: 40px;
-    }
-    
     .buscador input {
         width: 350px;
     }
@@ -96,14 +96,25 @@ input {
 }
 
 .btns-genero {
-    margin-left: 80px;   
+    margin-left: 80px;
+    margin-top: 60px; 
+}
+
+.btn-clear {
+    button {
+        font-size: small;
+        width: 60px;
+        border-radius: 20px;
+    }
+    :hover {
+        color: #f76767;
+    }
 }
 
 .btns-genero p {
     font-family:'Times New Roman', Times, serif;
     font-size: 20px;
     font-weight: bold;
-    padding-top: 50px;
     color:rgb(121, 224, 126);
 } 
 

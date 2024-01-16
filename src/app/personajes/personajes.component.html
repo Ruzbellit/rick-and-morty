@@ -12,6 +12,11 @@
 
 
     <div class="btns-genero">
+        <div class="btn-clear" *ngIf="nombreBusqueda">
+            <button class="btn" (click)="clear()">
+                clear <i class="fa fa-times"></i>
+            </button>
+        </div>
         <p>Filter by gender</p>
         <button class="btn female" [ngClass]="{'selected': generoSeleccionado === 'female'}" (click)="filtrarPorGenero('female')">
             Female

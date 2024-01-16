@@ -6,6 +6,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { Personaje } from '../personaje';
 import { PersonajeDetailComponent } from '../personaje-detail/personaje-detail.component';
 import { PersonajeService } from '../personaje.service';
+import { catchError, throwError } from 'rxjs';
 
 @Component({
   selector: 'app-personajes',
@@ -65,6 +66,11 @@ export class PersonajesComponent implements OnInit{
       this.personajeService.getPersonajesPorGenero(genero)
         .subscribe((response) => this.personajes = response.results);
     }
+  }
+
+  clear() {
+    this.nombreBusqueda = "";
+    this.generoSeleccionado = "";
   }
 
 }
