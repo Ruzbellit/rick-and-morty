@@ -50,7 +50,13 @@ export class PersonajesComponent implements OnInit{
   buscar() {
     if (this.nombreBusqueda !== '') {
       this.personajeService.getPersonajePorNombre(this.nombreBusqueda)
-        .subscribe((response) => this.personajes = response.results); 
+        .pipe( catchError((error) => throwError(() => error)) )
+        .subscribe({
+          next: (response) => this.personajes = response.results,
+          error: (err) => {
+            this.personajes = [];
+          }
+        }); 
     } else {
       this.getPersonajes();
     }
