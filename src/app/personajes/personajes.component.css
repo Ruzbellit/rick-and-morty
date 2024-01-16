@@ -65,7 +65,6 @@ input {
 .btn-genero {
     display: flex;
     width: 100%;
-    
 } 
 
 .btns-genero p {
@@ -93,8 +92,12 @@ input {
 
 .btn:hover {
     background: rgb(70, 70, 70);
-     color:rgb(255, 255, 255);}
+     color:rgb(255, 255, 255);
+}
 
+.btn.selected {
+    background-color: darkcyan;
+}
 
 .personajes {
   width: 100%;

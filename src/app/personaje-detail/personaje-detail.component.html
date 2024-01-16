@@ -9,46 +9,31 @@
     <img src={{personaje.image}}>
 
     <div class="detail">
-        <span class="bold">id: </span>{{personaje.id}}
+        <span class="bold">Name: </span>{{personaje.name}}
     </div>
 
     <div class="detail">
-        <span class="bold">name: </span>{{personaje.name}}
+        <span class="bold">Status: </span>{{personaje.status}}
     </div>
 
     <div class="detail">
-        <span class="bold">status: </span>{{personaje.status}}
+        <span class="bold">Species: </span>{{personaje.species}}
     </div>
 
     <div class="detail">
-        <span class="bold">species: </span>{{personaje.species}}
+        <span class="bold">Gender: </span>{{personaje.gender}}
     </div>
 
     <div class="detail">
-        <span class="bold">gender: </span>{{personaje.gender}}
+        <span class="bold">Origin : </span>{{personaje.origin.name }}
     </div>
 
     <div class="detail">
-        <span class="bold">origin : </span>{{personaje.origin }}
+        <span class="bold">Location: </span>{{personaje.location.name}}
     </div>
 
     <div class="detail">
-        <span class="bold">location: </span>{{personaje.location}}
-    </div>
-    <div class="detail">
-        <span class="bold">image: </span>{{personaje.image}}
-    </div>
-
-    <div class="detail">
-        <span class="bold">episode: </span> <span class="episode" > {{personaje.episode}}</span>
-    </div>
-
-    <div class="detail">
-        <span class="bold">url : </span>{{personaje.url }}
-    </div>
-
-    <div class="detail">
-        <span class="bold">created: </span>{{personaje.created}}
+        <span class="bold">Created: </span>{{personaje.created}}
     </div>
 
     <button class="btn-back" (click)="goBack()">Back</button>

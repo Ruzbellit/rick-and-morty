@@ -10,18 +10,17 @@
 
 
     <div class="btns-genero">
-        <p>Filtrar por genero</p>
-
-        <button class="btn female" (click)="filtrarPorGenero('female')">
+        <p>Filter by gender</p>
+        <button class="btn female" [ngClass]="{'selected': generoSeleccionado === 'female'}" (click)="filtrarPorGenero('female')">
             Female
         </button>
-        <button class="btn male" (click)="filtrarPorGenero('male')">
+        <button class="btn male" [ngClass]="{'selected': generoSeleccionado === 'male'}" (click)="filtrarPorGenero('male')">
             Male
         </button>
-        <button class="btn genderless" (click)="filtrarPorGenero('genderless')">
+        <button class="btn genderless" [ngClass]="{'selected': generoSeleccionado === 'genderless'}" (click)="filtrarPorGenero('genderless')">
             Genderless
         </button>
-        <button class="btn unknown" (click)="filtrarPorGenero('unknown')">
+        <button class="btn unknown" [ngClass]="{'selected': generoSeleccionado === 'unknown'}" (click)="filtrarPorGenero('unknown')">
             Unknown
         </button>
 

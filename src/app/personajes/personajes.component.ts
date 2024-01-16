@@ -28,6 +28,7 @@ export class PersonajesComponent implements OnInit{
   siguienteUrl: string = '';
   // nombre del personaje que va a buscar
   nombreBusqueda: string = '';
+  generoSeleccionado: string = '';
 
   constructor(private personajeService: PersonajeService) { }
 
@@ -55,8 +56,14 @@ export class PersonajesComponent implements OnInit{
   }
 
   filtrarPorGenero(genero: string) {
-    this.personajeService.getPersonajesPorGenero(genero)
-      .subscribe((response) => this.personajes = response.results);
+    if (genero === this.generoSeleccionado) {
+      this.generoSeleccionado = "";
+      this.buscar();
+    } else {
+      this.generoSeleccionado = genero;
+      this.personajeService.getPersonajesPorGenero(genero)
+        .subscribe((response) => this.personajes = response.results);
+    }
   }
 
 }
