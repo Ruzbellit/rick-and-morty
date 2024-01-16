@@ -49,30 +49,62 @@ input {
     transition: all .7s ease;
 }
 
-.buscador:hover input {
-    width: 350px;
+@media screen and (max-width: 577px) {
+    .buscador {
+        margin-top: 75px;
+    }
+    .barra-buscador {
+        min-height: 40px;
+    }
 }
 
-.buscador:hover i {
-    transform: rotate(-360deg);
+@media screen and (min-width: 700px) {
+
+    .buscador-open input {
+        width: 350px;
+    }
+    
+    .buscador:hover input {
+        width: 350px;
+    }
+
+    .buscador:hover i {
+        transform: rotate(-360deg);
+    }
+    
+    .boton:hover {
+        background: #4cc566;
+        transition: all .7s ease;
+    }
+    
 }
 
-.boton:hover {
-    background: #4cc566;
-    transition: all .7s ease;
+@media screen and (max-width: 700px) {
+    .barra-buscador {
+        min-height: 40px;
+    }
+    
+    .buscador input {
+        width: 350px;
+    }
 }
+
 
 .btn-genero {
     display: flex;
     width: 100%;
-} 
+}
+
+.btns-genero {
+    margin-left: 80px;   
+}
 
 .btns-genero p {
     font-family:'Times New Roman', Times, serif;
     font-size: 20px;
     font-weight: bold;
     padding-top: 50px;
-    color:rgb(121, 224, 126)
+    color:rgb(121, 224, 126);
 } 
 
 .btn {
@@ -92,7 +124,8 @@ input {
 
 .btn:hover {
     background: rgb(70, 70, 70);
-     color:rgb(255, 255, 255);
+    color:rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 .btn.selected {

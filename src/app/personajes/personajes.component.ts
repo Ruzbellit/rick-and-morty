@@ -56,6 +56,7 @@ export class PersonajesComponent implements OnInit{
   }
 
   filtrarPorGenero(genero: string) {
+    this.nombreBusqueda = "";
     if (genero === this.generoSeleccionado) {
       this.generoSeleccionado = "";
       this.buscar();
