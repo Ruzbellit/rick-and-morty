@@ -17,16 +17,13 @@ export class PersonajeService {
   ) { }
 
   getPersonajes(): Observable<Personaje[]> {
-    // return of (PERSONAJES);
     const url = this.baseURL + '/character';
-
-    // refactor the following line so it gets the property response before returning
     return this.http.get<PersonajeResponse>(url).pipe(
       map( response => {
         this.siguienteUrl = response.info.next;
         return response.results
       })
-    )
+    );
   }
 
   getPersonaje(id: number): Observable<Personaje | undefined> {
@@ -46,6 +43,16 @@ export class PersonajeService {
       )
     }
   }
- 
+
+  // el siguiente método va a retornar un personaje dado un nombre
+  getPersonajePorNombre(nombre: string): Observable<PersonajeResponse> {
+    const url = this.baseURL + '/character/?name=' + nombre;
+    return this.http.get<PersonajeResponse>(url);
+  }
+
+  getPersonajesPorGenero(genero: string): Observable<PersonajeResponse> {
+    const url = this.baseURL + "/character/?gender=" + genero;
+    return this.http.get<PersonajeResponse>(url); 
+  }
 
 }

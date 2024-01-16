@@ -26,6 +26,8 @@ export class PersonajesComponent implements OnInit{
 
   personajes!: Personaje[];
   siguienteUrl: string = '';
+  // nombre del personaje que va a buscar
+  nombreBusqueda: string = '';
 
   constructor(private personajeService: PersonajeService) { }
 
@@ -35,12 +37,26 @@ export class PersonajesComponent implements OnInit{
 
   getPersonajes(): void {
     this.personajeService.getPersonajes() 
-      .subscribe(respuesta => this.personajes = respuesta);
+      .subscribe((respuesta) => this.personajes = respuesta);
   }
 
   onScroll() {
     this.personajeService.getSiguientePagina().subscribe(
       personajes => this.personajes = [...this.personajes, ...personajes])
+  }
+
+  buscar() {
+    if (this.nombreBusqueda !== '') {
+      this.personajeService.getPersonajePorNombre(this.nombreBusqueda)
+        .subscribe((response) => this.personajes = response.results); 
+    } else {
+      this.getPersonajes();
     }
+  }
+
+  filtrarPorGenero(genero: string) {
+    this.personajeService.getPersonajesPorGenero(genero)
+      .subscribe((response) => this.personajes = response.results);
+  }
 
 }
